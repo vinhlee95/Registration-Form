@@ -28,6 +28,15 @@ class Form extends Component {
           validate={[required]}
         />
 
+        
+        <Field 
+          name='email'
+          component={Input}
+          type='text'
+          label='Email'
+          validate={[required]}
+        />
+
         <Field 
           name='password'
           component={Input}
