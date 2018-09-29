@@ -1,0 +1,42 @@
+:root {
+  --body-font: 'Raleway', sans-serif;
+}
+
+.App, .field {
+  display: flex; flex-direction: column;
+}
+
+.field {
+  margin: 10px 0;
+}
+select, input {
+  width: 30%;
+}
+
+select {
+  font-family: var(--body-font);
+  margin-top: 5px; padding: 5px 0; border-radius: 3px;
+}
+
+input {
+  border: none;
+  padding: 5px 0;
+  border-bottom: .5px solid lightgrey;
+  font-family: var(--body-font);
+}
+
+input:focus {
+  outline: none;
+}
+
+.checkbox {
+  flex-direction: row;
+}
+
+button {
+  font-family: var(--body-font);
+  padding: 10px 10px;
+  border-radius: 3px;
+  background: rgb(86, 117, 202); color: #fff;
+  border: none;
+}
