@@ -9,12 +9,12 @@ class App extends Component {
   // set initial value
   getInitialValues = () => {
     return {
-      firstName: 'Vinh',
-      lastName: 'Le',
-      email: 'lethanhvinh95@gmail.com',
-      password: 'supercrv95',
-      confirmPassword: 'supercrv95',
-      newsletter: true
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      newsletter: false
     }
   }
 
