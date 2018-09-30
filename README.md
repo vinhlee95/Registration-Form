@@ -1,4 +1,4 @@
-# Simple form
+# Registration form
 
 ## Description
 A simple form with field and susbmission validation.
