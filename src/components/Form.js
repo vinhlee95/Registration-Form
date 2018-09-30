@@ -58,7 +58,7 @@ const Form = (props) => {
         name='newsletter'
         component={Input}
         type='checkbox'
-        label='Subscribe '
+        label='Subscribe to our newsletter.'
         className='field checkbox'
       />
 

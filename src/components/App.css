@@ -7,14 +7,18 @@
 }
 
 .App {
-  margin-left: 10%;
+  width: 40%; margin: 0 auto;
 }
 
 .field {
   margin: 10px 0;
 }
+
+.field label {
+  font-weight: 600;
+}
+
 select, input {
-  width: 50%;
 }
 
 select {
@@ -34,7 +38,13 @@ input:focus {
 }
 
 .checkbox {
-  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.checkbox input {
+  zoom: 2; 
+  margin: 5px 0 0;
+  width: 20px;
 }
 
 button {
@@ -44,6 +54,8 @@ button {
   background: rgb(86, 117, 202); color: #fff;
   border: none;
   cursor: pointer;
+  font-size: 20px; 
+  width: 100%; 
 }
 
 .disabled {
