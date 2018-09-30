@@ -4,7 +4,7 @@ import { Input, Select } from './fields';
 import { required, minPassLength, matchPassword } from '../validation';
 
 const Form = (props) => {
-  const { handleSubmit } = props;
+  const { handleSubmit, pristine, submitting } = props;
   return (
     <form onSubmit={handleSubmit}>
       <Field 
@@ -27,7 +27,7 @@ const Form = (props) => {
       <Field 
         name='email'
         component={Input}
-        type='text'
+        type='email'
         label='Email'
         validate={[required]}
       />
@@ -62,7 +62,7 @@ const Form = (props) => {
         className='field checkbox'
       />
 
-      <button type='submit'>Sign up</button>
+      <button type='submit' disabled={pristine || submitting}>Sign up</button>
     </form>
   )
 }
