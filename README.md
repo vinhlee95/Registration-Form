@@ -15,4 +15,4 @@ A simple form with field and susbmission validation.
 ## Demo
 | No filled field     | Password validation   | Complete form    |
 | :-------------: | :-------------: | :-------------: |
-| ![form-1](screenshots/Redux-form.png) | ![form-2](screenshots/redux-form-3.png) | ![form-3](screenshots/redux-form-4.png) 
+| ![form-1](screenshots/Redux-form.PNG) | ![form-2](screenshots/redux-form-3.PNG) | ![form-3](screenshots/redux-form-4.PNG) 
