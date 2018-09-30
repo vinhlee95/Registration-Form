@@ -17,6 +17,6 @@ A simple form with field and susbmission validation.
 | :-------------: | :-------------: | 
 | ![form-1](screenshots/form.PNG) | ![form-2](screenshots/form-blank.PNG) | 
 
-| Wrong password     | Success submission   |
+| Wrong password     | Successful submission   |
 | :-------------: | :-------------: | 
 | ![form-3](screenshots/form-wrong-pass.PNG) | ![form-4](screenshots/form-success.PNG) | 
