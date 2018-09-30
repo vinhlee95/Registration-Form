@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Input, Select } from './fields';
-import { required, minPassLength, matchPassword } from '../validation';
+import { required, minPassLength, matchPassword, email } from '../validation';
 
 const Form = (props) => {
   const { handleSubmit, pristine, submitting } = props;
@@ -29,7 +29,7 @@ const Form = (props) => {
         component={Input}
         type='email'
         label='Email'
-        validate={[required]}
+        validate={[required, email]}
       />
 
       <Field 
