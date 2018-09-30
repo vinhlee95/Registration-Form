@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Form</h1>
+        <h1>Registration</h1>
         <Form
           initialValues={this.getInitialValues()}
           onSubmit={this.submit}

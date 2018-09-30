@@ -1,14 +1,15 @@
 import React from 'react'
 
 export const Input = (props) => {
+  const { meta: {error, touched} } = props;
   return(
     <div className={props.className?props.className:'field'}>
       <label>{props.label}</label>
       <input type={props.type} {...props.input} />
       { 
-        props.meta.error
+        error
         &&
-        props.meta.touched
+        touched
         &&
         <span style={{color: 'red'}}>{props.meta.error}</span>
       }
@@ -21,8 +22,9 @@ export const Select = (props) =>
   <div className='field'>
     <label>{props.label}</label>
     <select {...props.input}>
-      <option value='Lamborghini'>Lamborghini</option>
-      <option value='Ferrari'>Ferrari</option>
+      <option value='Bachelor'>Bachelor</option>
+      <option value='Master'>Master</option>
+      <option value='Vocational'>Vocational</option>
     </select>
   </div>
 

@@ -51,7 +51,7 @@ const Form = (props) => {
       <Field
         name='brand'
         component={Select}
-        label='Brand'
+        label='Education level'
       />
 
       <Field 
