@@ -62,7 +62,7 @@ const Form = (props) => {
         className='field checkbox'
       />
 
-      <button type='submit' disabled={pristine || submitting}>Sign up</button>
+      <button type='submit' className={pristine || submitting ? 'disabled' : '' }>Sign up</button>
     </form>
   )
 }
