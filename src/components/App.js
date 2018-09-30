@@ -4,6 +4,7 @@ import './App.css';
 
 class App extends Component {
 
+  // set initial value
   getInitialValues = () => {
     return {
       firstName: '',
@@ -12,12 +13,18 @@ class App extends Component {
     }
   }
 
+
+  submit = (values) => {
+    console.log(values)
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Form</h1>
         <Form
           initialValues={this.getInitialValues()}
+          onSubmit={this.submit}
         />
       </div>
     );

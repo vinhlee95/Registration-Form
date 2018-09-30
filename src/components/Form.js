@@ -3,78 +3,70 @@ import { Field, reduxForm } from 'redux-form';
 import { Input, Select } from './fields';
 import { required, minPassLength, matchPassword } from '../validation';
 
-class Form extends Component {
+const Form = (props) => {
+  const { handleSubmit } = props;
+  return (
+    <form onSubmit={handleSubmit}>
+      <Field 
+        name='firstName'
+        component={Input}
+        type='text'
+        label='First name'
+        validate={[required]}
+      />
 
-  submit = (values) => {
-    console.log(values)
-  };
+      <Field 
+        name='lastName'
+        component={Input}
+        type='text'
+        label='Last Name'
+        validate={[required]}
+      />
 
-  render() { 
-    return (
-      <form onSubmit={this.submit}>
-        <Field 
-          name='firstName'
-          component={Input}
-          type='text'
-          label='First name'
-          validate={[required]}
-        />
+      
+      <Field 
+        name='email'
+        component={Input}
+        type='text'
+        label='Email'
+        validate={[required]}
+      />
 
-        <Field 
-          name='lastName'
-          component={Input}
-          type='text'
-          label='Last Name'
-          validate={[required]}
-        />
+      <Field 
+        name='password'
+        component={Input}
+        type='password'
+        label='Password'
+        validate={[required, minPassLength]}
+      />
 
-        
-        <Field 
-          name='email'
-          component={Input}
-          type='text'
-          label='Email'
-          validate={[required]}
-        />
+      <Field 
+        name='confirmPassword'
+        component={Input}
+        type='text'
+        label='Confirm password'
+        validate={[required, matchPassword]}
+      />
+     
+      <Field
+        name='brand'
+        component={Select}
+        label='Brand'
+      />
 
-        <Field 
-          name='password'
-          component={Input}
-          type='password'
-          label='Password'
-          validate={[required, minPassLength]}
-        />
+      <Field 
+        name='newsletter'
+        component={Input}
+        type='checkbox'
+        label='Subscribe '
+        className='field checkbox'
+      />
 
-        <Field 
-          name='confirmPassword'
-          component={Input}
-          type='text'
-          label='Confirm password'
-          validate={[required, matchPassword]}
-        />
-       
-        <Field
-          name='brand'
-          component={Select}
-          label='Brand'
-        />
-
-        <Field 
-          name='newsletter'
-          component={Input}
-          type='checkbox'
-          label='Subscribe '
-          className='field checkbox'
-        />
-
-        <button type='submit'>Sign up</button>
-      </form>
-    )
-  }
+      <button type='submit'>Sign up</button>
+    </form>
+  )
 }
 
-Form = reduxForm({
-  form: 'register',
+export default reduxForm({
+  form: 'sandbox'
 })(Form);
-
-export default Form;
